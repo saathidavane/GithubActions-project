@@ -1,0 +1,15 @@
+name: deploy
+
+on: 
+  workflow_call:
+
+jobs:
+  build:
+    runs-on: self-hosted
+    steps:
+      - name: Code Clone
+        uses: actions/checkout@v7
+      - name: Deploy via Nginx
+        run: cp index.html /var/www/html
+      - name: Deploy the code
+        run: echo "Code Deployed to AWS EC2 Instance"
