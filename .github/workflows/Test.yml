@@ -1,0 +1,12 @@
+name: test
+
+on: 
+  workflow_call: 
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Test The Code 
+      run: echo "code test using sonar/pytest"
